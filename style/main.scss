@@ -1,0 +1,105 @@
+/*setting the values below*/
+$size: 100px; 
+$color--gradient: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);;
+$color--additional: #F0145A;
+$color--separator: #E6E6F0;
+$color--background: #F5F5FA;
+$font-color--main: #FFFFFF;
+$font-color--disabled: #B3B3BA;
+$font-color--active: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+$font-color--hover: #F0145A;
+$font-color--accent: #24A3FF;
+$font-color--regular: #323264;
+$font-color--basic: #000000;
+$width: 100%;
+$fw: 400; /*font-weight*/
+$z: 100; /*z-index*/
+
+/*importing mixin*/
+@import 'mixin';
+
+* {
+    margin: 0; /*setting margin to 0, to reset the default page styling*/
+    padding: 0; /*setting padding to 0 to reset the default page styling*/
+    outline: 0; /*setting outline to 0 to reset the default page styling*/
+    border: 0; /*setting border to 0 to reset the default page styling*/
+    box-sizing: border-box; /*setting box-sizing, so we dont need to manually count this*/
+}
+
+html {
+    font-size: 16px; /*setting page font size to 16px*/
+}
+
+body {
+    font-size: 1rem; /*making 16px font-size equivalent to 1 rem*/
+    font-family: 'Montserrat', sans-serif;; /*setting the font*/
+}
+
+a {
+    text-decoration: none; /*removing the text decoration for links (i.e. underline)*/
+}
+
+ul, ol {
+    list-style: none; /*removing list styling (bullets) for the lists*/
+}
+
+.header {
+    @include flex(row, space-between, center); /*including flex*/
+    @include padding (($size/2), ($size + 60px), 0 , ($size + 60px));
+
+    .header__wrap {
+        @include flex(column, flex-start, center); /*including flex*/
+
+        .header__info {
+            @include flex(row, flex-start, center); /*including flex*/
+            
+            .header__nav {
+                @include flex(row, flex-start, center); /*including flex*/
+
+                .header__item {
+                    @include padding (($size - 95px), ($size - 93px), ($size - 95px), ($size - 93px));
+                    @include margin (0, ($size - 94px), ($size - 80px) , 0);
+                    &:hover {
+                        background: $color--additional;
+                        @include border-radius (8px);
+                    }
+
+                    .header__link {
+                        @include font-size(16px, 700, auto);
+                        color: $font-color--main;
+                    }
+                }
+
+                .header__item--special {
+                    @include padding (0, ($size - 94px), ($size - 80px) , 0);
+
+                    .header__link--special, .header__link--secondary {
+                    color: $font-color--main;
+                    }
+                }
+            }
+        }
+
+        .subheader__menu {
+            @include flex(row, flex-start, center); /*including flex*/
+
+            .subheader__nav {
+                @include flex(row, flex-start, center); /*including flex*/
+
+                .subheader__item {
+                    @include padding (0, ($size - 85px), 0, 0);
+
+                    .subheader__link {
+                        @include font-size(16px, 700, auto);
+                        color: $font-color--main;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    
+}
+

@@ -1,3 +1,110 @@
+/*setting the values below*/
+/*font-weight*/
+/*z-index*/
+/*importing mixin*/
+* {
+  margin: 0;
+  /*setting margin to 0, to reset the default page styling*/
+  padding: 0;
+  /*setting padding to 0 to reset the default page styling*/
+  outline: 0;
+  /*setting outline to 0 to reset the default page styling*/
+  border: 0;
+  /*setting border to 0 to reset the default page styling*/
+  box-sizing: border-box;
+  /*setting box-sizing, so we dont need to manually count this*/ }
 
+html {
+  font-size: 16px;
+  /*setting page font size to 16px*/ }
+
+body {
+  font-size: 1rem;
+  /*making 16px font-size equivalent to 1 rem*/
+  font-family: 'Montserrat', sans-serif;
+  /*setting the font*/ }
+
+a {
+  text-decoration: none;
+  /*removing the text decoration for links (i.e. underline)*/ }
+
+ul, ol {
+  list-style: none;
+  /*removing list styling (bullets) for the lists*/ }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /*including flex*/
+  padding-top: 50px;
+  padding-right: 160px;
+  padding-bottom: 0;
+  padding-left: 160px; }
+  .header .header__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /*including flex*/ }
+    .header .header__wrap .header__info {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      /*including flex*/ }
+      .header .header__wrap .header__info .header__nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        /*including flex*/ }
+        .header .header__wrap .header__info .header__nav .header__item {
+          padding-top: 5px;
+          padding-right: 7px;
+          padding-bottom: 5px;
+          padding-left: 7px;
+          margin-top: 0;
+          margin-right: 6px;
+          margin-bottom: 20px;
+          margin-left: 0; }
+          .header .header__wrap .header__info .header__nav .header__item:hover {
+            background: #F0145A;
+            border-radius: 8px; }
+          .header .header__wrap .header__info .header__nav .header__item .header__link {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: auto;
+            color: #FFFFFF; }
+        .header .header__wrap .header__info .header__nav .header__item--special {
+          padding-top: 0;
+          padding-right: 6px;
+          padding-bottom: 20px;
+          padding-left: 0; }
+          .header .header__wrap .header__info .header__nav .header__item--special .header__link--special, .header .header__wrap .header__info .header__nav .header__item--special .header__link--secondary {
+            color: #FFFFFF; }
+    .header .header__wrap .subheader__menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      /*including flex*/ }
+      .header .header__wrap .subheader__menu .subheader__nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        /*including flex*/ }
+        .header .header__wrap .subheader__menu .subheader__nav .subheader__item {
+          padding-top: 0;
+          padding-right: 15px;
+          padding-bottom: 0;
+          padding-left: 0; }
+          .header .header__wrap .subheader__menu .subheader__nav .subheader__item .subheader__link {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: auto;
+            color: #FFFFFF; }
 
 /*# sourceMappingURL=main.css.map */
