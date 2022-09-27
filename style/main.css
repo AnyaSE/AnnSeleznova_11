@@ -230,5 +230,44 @@ ul, ol {
       padding-right: 0;
       padding-bottom: 0;
       padding-left: 0; }
+  .container .service__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-right: 160px;
+    padding-bottom: 60px;
+    padding-left: 160px;
+    flex-wrap: wrap; }
+    .container .service__content .service__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 32%;
+      padding-top: 0;
+      padding-right: 60px;
+      padding-bottom: 87px;
+      padding-left: 0; }
+      .container .service__content .service__item .service__img {
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 30px;
+        padding-left: 0; }
+      .container .service__content .service__item .service__subtitle {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 27px;
+        color: #24A3FF;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 15px;
+        padding-left: 0; }
+      .container .service__content .service__item .service__text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        color: #FFFFFF; }
 
 /*# sourceMappingURL=main.css.map */

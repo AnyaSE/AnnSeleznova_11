@@ -208,4 +208,31 @@ ul, ol {
             @include padding (($size - 90px), 0, 0, 0);
         }
     }
+
+    .service__content {
+        @include flex(row, flex-start, flex-start);
+        @include padding (($size - 40px), ($size + 60px), ($size - 40px), ($size + 60px));
+        flex-wrap: wrap;
+
+        .service__item {
+            @include flex(column, flex-start, flex-start);
+            width: 32%;
+            @include padding (0, ($size - 40px), ($size - 13px), 0);
+
+            .service__img {
+                @include padding (0, 0, ($size - 70px), 0);
+            }
+
+            .service__subtitle {
+                @include font-size(22px, 700, 27px);
+                color: $font-color--accent;
+                @include padding (0, 0, ($size - 85px), 0);
+            }
+
+            .service__text {
+                @include font-size(16px, 400, 26px);
+                color: $font-color--main;
+            }
+        }
+    }
 }
