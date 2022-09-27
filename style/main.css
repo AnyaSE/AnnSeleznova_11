@@ -79,6 +79,7 @@ ul, ol {
               border-radius: 8px; }
             .container .header .header__wrap .header__info .header__nav .header__item .header__link {
               font-size: 16px;
+              font-size: 1rem;
               font-weight: 700;
               line-height: auto;
               color: #FFFFFF; }
@@ -111,6 +112,7 @@ ul, ol {
             padding-left: 0; }
             .container .header .header__wrap .subheader__menu .subheader__nav .subheader__item .subheader__link {
               font-size: 16px;
+              font-size: 1rem;
               font-weight: 700;
               line-height: auto;
               color: #FFFFFF; }
@@ -131,6 +133,7 @@ ul, ol {
       padding-bottom: 320px;
       padding-left: 0;
       font-size: 38px;
+      font-size: 2.375rem;
       font-weight: 700;
       line-height: auto;
       color: #FFFFFF; }
@@ -162,6 +165,7 @@ ul, ol {
         padding-bottom: 30px;
         padding-left: 0;
         font-size: 38px;
+        font-size: 2.375rem;
         font-weight: 700;
         line-height: 46px;
         border-right: 4px solid rgba(255, 255, 255, 0.3);
@@ -187,10 +191,12 @@ ul, ol {
           padding-bottom: 30px;
           padding-left: 0;
           font-size: 30px;
+          font-size: 1.875rem;
           font-weight: 700;
           line-height: auto; }
         .container .banner__dropdown .dropdown__menu .dropdown__content .dropdown__text {
           font-size: 19px;
+          font-size: 1.1875rem;
           font-weight: 400;
           line-height: 30px; }
   .container .service__info {
@@ -209,6 +215,7 @@ ul, ol {
       align-items: center; }
       .container .service__info .service__subheading .service__heading {
         font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 700;
         line-height: 14px;
         padding-top: 0;
@@ -221,6 +228,7 @@ ul, ol {
             color: #F0145A; }
     .container .service__info .service__title {
       font-size: 38px;
+      font-size: 2.375rem;
       font-weight: 700;
       line-height: 46px;
       background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
@@ -258,6 +266,7 @@ ul, ol {
         padding-left: 0; }
       .container .service__content .service__item .service__subtitle {
         font-size: 22px;
+        font-size: 1.375rem;
         font-weight: 700;
         line-height: 27px;
         color: #24A3FF;
@@ -267,6 +276,7 @@ ul, ol {
         padding-left: 0; }
       .container .service__content .service__item .service__text {
         font-size: 16px;
+        font-size: 1rem;
         font-weight: 400;
         line-height: 26px;
         color: #FFFFFF; }
@@ -324,6 +334,7 @@ ul, ol {
   align-items: center; }
   .section .sponsors .sponsors__title {
     font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
     line-height: 17px;
     color: #323264;
