@@ -79,7 +79,7 @@
                     </h1>
                 </div>
                 <div class="banner__dropdown">
-                    <button class="dropdown__btn" onclick="show_hide()">
+                    <button class="dropdown__btn" id="drp__btn" onclick="changeVisability ()">
                         <img src="imgs/dropdown_btn.svg" alt="dropdownbtn" class="dropdown__img">
                     </button>
                     <div class="dropdown__menu" id="dropdown__menu">
@@ -180,7 +180,7 @@
             <div class="slideshow__container">
                 <div class="slider">
                     <div class="slider__item">
-                        <div id="slide--primary" class="slide">
+                        <div class="slide">
                             <div class="slider__picture">
                                 <img src="imgs/reviewphoto.png" alt="person" class="slider__img">
                             </div>
@@ -202,7 +202,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="slide--secondary" class="slide">
+                        <div class="slide">
                             <img src="imgs/reviewperson.png" alt="man" class="slider__img">
                             <div class="slideshow__content">
                                 <div class="slideshow__title">
@@ -222,7 +222,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div id="slide--additional" class="slide">
+                        <div class="slide">
                             <img src="imgs/reviewlady.png" alt="lady" class="slider__img">
                             <div class="slideshow__content">
                                 <div class="slideshow__title">
@@ -243,10 +243,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="slider__nav">
-                        <a class="slider__navlink" href="#slide--primary"></a>
-                        <a class="slider__navlink" href="#slide--secondary"></a>
-                        <a class="slider__navlink" href="#slide--additional"></a>
+                    <div class="dots">
                     </div>
                 </div>
             </div>
@@ -277,14 +274,91 @@
                             <img src="imgs/arrowrightblue.svg" alt="arrowrightblue" class="link__img">
                         </p>
                         <h1 class="product__subtitle">
-                            Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+                            We have something to tell
                         </h1>
                     </div>
                     <div class="product__content">
+                        <img src="imgs/papers.png" alt="papers" class="product__img">
+                        <p class="product__subheading">
+                            Equity associate
+                        </p>
+                        <p class="product__date">
+                            April 22
+                        </p>
+                        <p class="product__text">
+                            I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering my parents told me that if I…
+                        </p>
+                    </div>
+                    <div class="product__content">
+                        <img src="imgs/gdpr.png" alt="gdpr" class="product__img">
+                        <p class="product__subheading">
+                            Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR
+                        </p>
+                        <p class="product__date">
+                            September 29
+                        </p>
+                        <p class="product__text">
+                            And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data Protection.
+                        </p>
+                    </div>
+                    <div class="product__content">
+                        <img src="imgs/millenials.png" alt="millenials" class="product__img">
+                        <p class="product__subheading">
+                            Millennial Testament
+                        </p>
+                        <p class="product__date">
+                            August 19
+                        </p>
+                        <p class="product__text">
+                            What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy of the Ukrainian generation X looks like this: an apartment in…
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
+        <footer class="footer">
+            <div class="footer__wrapper">
+                <div class="footer__items">
+                    <div class="footer__links">
+                        <ul class="footer__nav">
+                            <li class="footer__subcontent">
+                                <a href="#" class="footer__link">Kyiv, Mechnikova str, 14/1</a>
+                            </li>
+                            <li class="footer__subcontent">
+                                <img src="imgs/dot_separator.svg" alt="dot" class="footer__separator">
+                            </li>
+                            <li class="footer__subcontent">
+                                <a href="#" class="footer__link">On map</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__specifications">
+                        <p class="footer__text">
+                            © 2021 HLEGAL Law company, LLC
+                        </p>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    <ul class="footer__nav">
+                        <li class="footer__details">
+                            <img src="imgs/fb_smal.svg" alt="fbsmall" class="footer__img">
+                        </li>
+                        <li class="footer__details">
+                            <img src="imgs/dot_separator.svg" alt="dot" class="footer__separator">
+                        </li>
+                        <li class="footer__details">
+                            <a href="#" class="footer__info">0800 211 927</a>
+                        </li>
+                        <li class="footer__details">
+                            <img src="imgs/dot_separator.svg" alt="dot" class="footer__separator">
+                        </li>
+                        <li class="footer__details">
+                            <a href="#" class="footer__info">contact@forstudy.space</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>

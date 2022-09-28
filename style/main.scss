@@ -139,6 +139,7 @@ ul, ol {
         .dropdown__btn {
             background: none;
             z-index: $z;
+            cursor: pointer;
         }
 
         .dropdown__menu {
@@ -178,6 +179,10 @@ ul, ol {
                     @include font-size(19px, 400, 30px);
                 }
             }
+        }
+
+        .hide {
+            display: none;
         }
     }
 
@@ -276,22 +281,27 @@ ul, ol {
             }
         }
 
-        .slider__nav {
+        .dots {
             position: absolute;
-            bottom: 2px;
-            left: 50%;
-            width: 200px;
-            margin-left: -100px;
-            text-align: center;
+            bottom: 50px;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            width: 100%;
         }
-          
-          .slider__navlink {
-            display: inline-block;
-            height: 15px;
-            width: 15px;
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: gray;
             border-radius: 50%;
-            background-color: black;
-            margin: 0 10px 0 10px;
+            margin: 0 3px;
+            cursor: pointer;
+        }
+
+        .active-dot {
+            background: #3f3f3f;
+            cursor: default;
         }
     }
 

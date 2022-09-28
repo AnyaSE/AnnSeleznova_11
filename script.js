@@ -1,14 +1,3 @@
-var a;
-function show_hide()
-{
-    if(a==1)
-        {
-            document.getElementById("dropdown__menu").style.display="inline";
-            return a=0;
-        }
-    else
-        {
-            document.getElementById("dropdown__menu").style.display="none";
-            return a=1;
-        }
+function changeVisability () {
+    document.getElementById("dropdown__menu").classList.toggle("hide");
 }

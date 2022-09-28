@@ -144,7 +144,8 @@ ul, ol {
     align-items: center; }
     .container .banner__dropdown .dropdown__btn {
       background: none;
-      z-index: 100; }
+      z-index: 100;
+      cursor: pointer; }
     .container .banner__dropdown .dropdown__menu {
       display: flex;
       flex-direction: row;
@@ -199,6 +200,8 @@ ul, ol {
           font-size: 1.1875rem;
           font-weight: 400;
           line-height: 30px; }
+    .container .banner__dropdown .hide {
+      display: none; }
   .container .service__info {
     display: flex;
     flex-direction: column;
@@ -313,20 +316,23 @@ ul, ol {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start; }
-  .section .slider .slider__nav {
+  .section .slider .dots {
     position: absolute;
-    bottom: 2px;
-    left: 50%;
-    width: 200px;
-    margin-left: -100px;
-    text-align: center; }
-  .section .slider .slider__navlink {
-    display: inline-block;
-    height: 15px;
-    width: 15px;
+    bottom: 50px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+  .section .slider .dot {
+    width: 8px;
+    height: 8px;
+    background: gray;
     border-radius: 50%;
-    background-color: black;
-    margin: 0 10px 0 10px; }
+    margin: 0 3px;
+    cursor: pointer; }
+  .section .slider .active-dot {
+    background: #3f3f3f;
+    cursor: default; }
 .section .sponsors {
   display: flex;
   flex-direction: column;
