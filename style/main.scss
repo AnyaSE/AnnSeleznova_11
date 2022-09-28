@@ -340,4 +340,51 @@ ul, ol {
             }
         }
     }
+
+    .products {
+        @include padding (($size - 40px), ($size + 60), ($size - 70px), ($size + 60));
+        background: $color--background;
+
+        .product__container {
+    
+            .product__title {
+                @include flex(column, flex-start, flex-start);
+
+
+                .product__heading {
+                    @include font-size(14px, 700, 14px);
+                    @include padding (0, ($size - 95px), ($size - 90px), 0);
+                    
+                    .service__link {
+                        color: $font-color--accent;
+                        &:hover {
+                        color: $font-color--hover;
+                        }
+                    }
+                }
+
+                .product__subtitle {
+                    @include font-size(38px, 700, 46px);
+                    @include padding (0, 0, ($size - 70px), 0);
+                    background: $font-color--gradient;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                }
+            }
+
+            .product__info {
+
+                @include flex(row, flex-start, flex-start);
+                column-gap: 20px;
+
+                .product__content {
+                    @include flex(column, flex-start, flex-start);
+                    background: white;
+
+                }
+            }
+        }
+    }
 }
+
