@@ -98,13 +98,14 @@ ul, ol {
                     z-index: $z;
 
                     .subheader__item {
-                        @include padding (0, ($size - 85px), 0, 0);
+                        @include padding (0, ($size - 85px), ($size - 97px), 0);
 
                         .subheader__link {
                             @include font-size(16px, 700, auto);
                             color: $font-color--main;
                             &:hover {
                                 color: $font-color--hover;
+                                border-bottom: 2px solid #F0145A;
                             }
                         }
                     }
@@ -376,13 +377,64 @@ ul, ol {
             .product__info {
 
                 @include flex(row, flex-start, flex-start);
-                column-gap: 20px;
+                column-gap: 30px;
 
                 .product__content {
                     @include flex(column, flex-start, flex-start);
                     background: white;
+                    width: $width - 60%;
+                    border-radius: 8px;
+                    height: 480px;
 
+                    .product__img {
+                        align-self: stretch;
+                        &:hover {
+                            opacity: 0.5;
+                        }
+                    }
+
+                    .product__details {
+                        @include padding (($size - 70px), ($size - 70px), ($size - 70px), ($size - 70px));
+
+                        .product__subheading {
+                            @include padding (0, 0, ($size - 85px), 0);
+                            @include font-size(16px, 700, 20px);
+                            color: $font-color--accent;
+                            &:hover {
+                                color: $font-color--hover;
+                            }
+                        }
+
+                        .product__date {
+                            @include padding (0, 0, ($size - 85px), 0);
+                            @include font-size(12px, 700, 15px);
+                            color: $font-color--disabled;
+                            border-bottom: 4px solid $color--separator;
+                        }
+
+                        .product__text {
+                            @include padding (($size - 85px), 0, 0, 0);
+                            @include font-size(14px, 400, 22px);
+                        }
+                    }
                 }
+            }
+        }
+    }
+}
+
+.footer {
+    background: $color--background;
+    @include padding (($size - 70px), ($size + 60px), ($size - 70px), ($size + 60px));
+
+    .footer__wrapper {
+        border-top: 2px solid $color--separator;
+
+        .footer__items {
+            @include flex (row, space-between, flex-start);
+
+            .footer__nav {
+                @include flex (row, flex-start, flex-start);
             }
         }
     }
