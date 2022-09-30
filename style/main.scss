@@ -195,24 +195,16 @@ ul, ol {
             @include flex(row, flex-start, center);
 
             .service__heading {
-                @include font-size(14px, 700, 14px);
-                @include padding (0, ($size - 95px), 0, 0);
 
                 .service__link {
-                    color: $font-color--accent;
-                    &:hover {
-                        color: $font-color--hover;
-                    }
+                    @include padding (0, ($size - 95px), 0, 0);
+                    @include service--link ();
                 }
             }
         }
 
         .service__title {
-            @include font-size(38px, 700, 46px);
-            background: $font-color--gradient;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            @include gradient--title ();
             @include padding (($size - 90px), 0, 0, 0);
         }
     }
@@ -235,6 +227,9 @@ ul, ol {
                 @include font-size(22px, 700, 27px);
                 color: $font-color--accent;
                 @include padding (0, 0, ($size - 85px), 0);
+                &:hover{
+                    color: $font-color--hover;
+                }
             }
 
             .service__text {
@@ -253,7 +248,7 @@ ul, ol {
     
     .slider {
 
-        width: 100%;
+        width: $width;
         height: 298px;
         border-radius: 20px;
         overflow: hidden;
@@ -267,10 +262,12 @@ ul, ol {
 
             .slide {
                 @include flex(row, flex-start, flex-start);
-                width: 100%;
+                width: $width;
                 transform-origin: center center;
                 transform: scale(1);
                 scroll-snap-align: center;
+                background: $color--background;
+
             }
 
             .slider__img {
@@ -279,6 +276,32 @@ ul, ol {
 
             .slideshow__content {
                 @include flex(column, flex-start, flex-start);
+                @include padding (($size - 70px), ($size - 70px), ($size - 70px), ($size - 70px));
+
+                .slideshow__title {
+                    @include flex(row, flex-start, center);
+
+                    .service__link {
+                        @include padding (0, ($size - 96px), 0, 0);
+                        @include service--link ();
+                    }
+                }
+            }
+
+            .slideshow__subtitle {
+                @include gradient--title();
+                @include padding (0, 0, ($size - 70px), 0);
+            }
+
+            .slideshow__text {
+                @include font-size(16px, 700, 20px);
+                color: $font-color--disabled;
+                @include padding (0, 0, ($size - 94px), 0);
+            }
+
+            .slideshow__subtext {
+                @include font-size(14px, 400, 22px);
+                color: $font-color--disabled;
             }
         }
 
@@ -288,7 +311,7 @@ ul, ol {
             left: 0;
             display: flex;
             justify-content: center;
-            width: 100%;
+            width: $width;
         }
 
         .dot {
@@ -321,7 +344,7 @@ ul, ol {
             @include padding (0, 0, ($size - 40px),0);
 
             .sponsor__img, .sponsor__img--special, .sponsor__img--modified, .sponsor__img--secondary, .sponsor__img--edited {
-                width: 23%;
+                width: $width - 77%;
             }
 
             .sponsor__img--special {
@@ -353,24 +376,16 @@ ul, ol {
 
 
                 .product__heading {
-                    @include font-size(14px, 700, 14px);
                     @include padding (0, ($size - 95px), ($size - 90px), 0);
                     
                     .service__link {
-                        color: $font-color--accent;
-                        &:hover {
-                        color: $font-color--hover;
-                        }
+                        @include service--link ();
                     }
                 }
 
                 .product__subtitle {
-                    @include font-size(38px, 700, 46px);
+                    @include gradient--title ();
                     @include padding (0, 0, ($size - 70px), 0);
-                    background: $font-color--gradient;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    background-clip: text;
                 }
             }
 
