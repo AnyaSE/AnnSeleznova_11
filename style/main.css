@@ -576,21 +576,15 @@ ul, ol {
           padding-right: 10px;
           padding-bottom: 0;
           padding-left: 0; }
-          .footer .footer__wrapper .footer__contacts .footer__nav .footer__details .footer__info {
+          .footer .footer__wrapper .footer__contacts .footer__nav .footer__details .footer__info, .footer .footer__wrapper .footer__contacts .footer__nav .footer__details .footer__info--special {
             font-size: 16px;
             font-size: 1rem;
             font-weight: 700;
             line-height: 20px;
             color: #000000; }
-            .footer .footer__wrapper .footer__contacts .footer__nav .footer__details .footer__info:hover {
+            .footer .footer__wrapper .footer__contacts .footer__nav .footer__details .footer__info:hover, .footer .footer__wrapper .footer__contacts .footer__nav .footer__details .footer__info--special:hover {
               color: #F0145A; }
           .footer .footer__wrapper .footer__contacts .footer__nav .footer__details .footer__info--special {
-            font-size: 16px;
-            font-size: 1rem;
-            font-weight: 700;
-            line-height: 20px;
             color: #24A3FF; }
-            .footer .footer__wrapper .footer__contacts .footer__nav .footer__details .footer__info--special:hover {
-              color: #F0145A; }
 
 /*# sourceMappingURL=main.css.map */

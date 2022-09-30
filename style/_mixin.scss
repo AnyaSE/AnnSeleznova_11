@@ -62,3 +62,39 @@
       color: $font-color--hover;
   }
 }
+
+@mixin desktopHD {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1440px) and (max-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin tabletHD {
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin tabletMED {
+  @media (min-width: 960px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tabletSD {
+  @media (min-width: 768px) and (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: 375px) and (max-width: 768px) {
+    @content;
+  }
+}

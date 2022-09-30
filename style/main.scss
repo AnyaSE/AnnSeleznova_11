@@ -48,8 +48,8 @@ ul, ol {
     border-radius: 0px 0px 12px 12px;
     box-shadow:  0 12px 0 -4px #CACADB, 0 24px 0 -8px #E7E7F2;
 
-
     .header {
+
         @include flex(row, space-between, center); /*including flex*/
         @include padding (($size/2), ($size + 60px), 0 , ($size + 60px));
 
@@ -489,7 +489,7 @@ ul, ol {
                 .footer__details{
                     @include padding (0, ($size - 90px), 0, 0);
 
-                    .footer__info {
+                    .footer__info, .footer__info--special {
                         @include font-size(16px, 700, 20px);
                         color: $font-color--basic;
                         &:hover {
@@ -498,11 +498,7 @@ ul, ol {
                     }
 
                     .footer__info--special {
-                        @include font-size(16px, 700, 20px);
                         color: $font-color--accent;
-                        &:hover {
-                            color: $font-color--hover;
-                        }
                     }
                 }
             }
