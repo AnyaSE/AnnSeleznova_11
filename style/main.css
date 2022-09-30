@@ -475,11 +475,73 @@ ul, ol {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      align-items: flex-start; }
+      align-items: flex-start;
+      padding-top: 30px;
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-left: 0; }
       .footer .footer__wrapper .footer__items .footer__nav {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        align-items: flex-start; }
+        align-items: center; }
+        .footer .footer__wrapper .footer__items .footer__nav .footer__subcontent {
+          padding-top: 0;
+          padding-right: 10px;
+          padding-bottom: 0;
+          padding-left: 0; }
+          .footer .footer__wrapper .footer__items .footer__nav .footer__subcontent .footer__link {
+            font-size: 16px;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 20px;
+            color: #000000; }
+            .footer .footer__wrapper .footer__items .footer__nav .footer__subcontent .footer__link:hover {
+              color: #F0145A; }
+          .footer .footer__wrapper .footer__items .footer__nav .footer__subcontent .footer__link--special {
+            font-size: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            line-height: 15px;
+            color: #24A3FF; }
+            .footer .footer__wrapper .footer__items .footer__nav .footer__subcontent .footer__link--special:hover {
+              color: #F0145A; }
+    .footer .footer__wrapper .footer__text {
+      font-size: 16px;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 20px;
+      color: #B3B3BA; }
+    .footer .footer__wrapper .footer__contacts {
+      padding-top: 20px;
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-left: 0; }
+      .footer .footer__wrapper .footer__contacts .footer__nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center; }
+        .footer .footer__wrapper .footer__contacts .footer__nav .footer__details {
+          padding-top: 0;
+          padding-right: 10px;
+          padding-bottom: 0;
+          padding-left: 0; }
+          .footer .footer__wrapper .footer__contacts .footer__nav .footer__details .footer__info {
+            font-size: 16px;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 20px;
+            color: #000000; }
+            .footer .footer__wrapper .footer__contacts .footer__nav .footer__details .footer__info:hover {
+              color: #F0145A; }
+          .footer .footer__wrapper .footer__contacts .footer__nav .footer__details .footer__info--special {
+            font-size: 16px;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 20px;
+            color: #24A3FF; }
+            .footer .footer__wrapper .footer__contacts .footer__nav .footer__details .footer__info--special:hover {
+              color: #F0145A; }
 
 /*# sourceMappingURL=main.css.map */
