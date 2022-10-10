@@ -16,6 +16,12 @@
     padding-left: $left;
   }
 
+  @mixin setDimensions ($w, $h, $bradius) {
+    width: $w;
+    height: $h;
+    border-radius: $bradius;
+  }
+
   @mixin margin($top, $right, $bottom, $left) {
     margin-top: $top;
     margin-right: $right;

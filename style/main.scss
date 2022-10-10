@@ -60,6 +60,20 @@ ul, ol {
         @include padding (($size/2), ($size + 60px), 0 , ($size + 60px));
 
         .header__logo {
+
+            .logo__text {
+                @include desktop {
+                    display: none;
+                }
+            }
+            
+            .logo__text {
+                @include desktopHD {
+                    display: none;
+                }
+            }
+            
+
             @include mobile {
                 @include flex (row, flex-start, flex-start);
                 z-index: 100;
@@ -133,6 +147,38 @@ ul, ol {
             .subheader__menu {
                 @include flex(row, center, center); /*including flex*/
 
+                #toggle {
+
+                    display: none;
+
+                    &:checked~.subheader__nav {
+                        display: block;
+                        opacity: 1;
+                        background: #5d5d48;
+                        padding: 15px 20px 0;
+                        position: absolute;
+                        top: 68px;
+                        left: 0;
+                        right: 0;
+                    }
+                }
+
+                @include mobile {
+                    
+                    .toggle {
+                        display: inline-block;
+                        @include setDimensions (24px, 24px, 0);
+                        background-image: url(../imgs/Hamburger.svg);
+                        text-decoration: none;
+                        cursor: pointer;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                        margin-left: 26px;
+                    }
+                }
+
                 .subheader__nav {
                     @include flex(row, flex-start, center); /*including flex*/
                     z-index: $z;
@@ -168,6 +214,12 @@ ul, ol {
             .banner__img {
                 position: absolute;
                 top: 0;
+
+                @include mobile {
+                    overflow: hidden;
+                    overflow: -moz-hidden-unscrollable;
+                    overscroll-behavior-x: contain;
+                }
             }
 
             .banner__title {
@@ -175,6 +227,11 @@ ul, ol {
                 @include padding (($size*2 + 50px), 0, ($size*3 + 20px), 0);
                 @include font-size(38px, 700, auto);
                 color: $font-color--main;
+
+                @include mobile {
+                    width: 50%;
+                    @include padding (($size + 45px), 0, ($size*3 + 20px), 0);
+                }
             }
         }
     }
@@ -189,11 +246,27 @@ ul, ol {
         }
 
         .dropdown__menu {
+
+            @include mobile {
+                @include flex(column, flex-start, flex-start); 
+                @include padding (30px, 0, 30px, 30px);
+                width: 100%;
+            }
+
             @include flex(row, center, center); 
             @include padding (($size - 10px), ($size*3 - 20px), ($size - 40px), ($size*2 + 80px));
             color: $font-color--main;
 
             .dropdown__headings {
+
+                @include mobile {
+                    @include flex(row, flex-start, flex-start); 
+                    border-right: none; 
+                    border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+                    overflow-x: hidden;
+                    @include padding (0, 0, 20px, 0);
+                }
+                
                 @include flex(column, flex-start, flex-end); 
                 @include padding (($size - 70px), ($size - 40px), ($size - 70px), 0);
                 @include font-size(38px, 700, 46px);
@@ -202,6 +275,12 @@ ul, ol {
                 display: inline-block;
 
                 .dropdown__item {
+
+                    @include mobile {
+                        padding-right: 30px;
+                        white-space: nowrap;
+                    }
+                    
                     @include padding (0, 0, ($size - 80px), 0);
                     
                     .dropdown__link {
@@ -214,9 +293,21 @@ ul, ol {
             }
 
             .dropdown__content {
+
+                @include mobile {
+                    @include flex (column, flex-start, flex-start);
+                    @include padding (30px, 30px, 0, 0);
+                    width: 90%;
+                }
+
                 @include padding (0, 0, 0, ($size - 40px));
 
                 .dropdown__subheading {
+
+                    @include mobile {
+                        @include font-size(20px, 700, 24px);
+                    }
+
                     @include padding (0, 0, ($size - 70px), 0);
                     @include font-size(30px, 700, auto);
                 }
@@ -234,6 +325,11 @@ ul, ol {
 
     .service__info {
         @include flex(column, flex-start, flex-start);
+
+        @include mobile {
+            @include padding (0, 30px, 30px, 30px);
+        }
+
         @include padding (($size - 40px), ($size + 60px), ($size - 40px), ($size + 60px));
 
         .service__subheading {
@@ -251,20 +347,38 @@ ul, ol {
         .service__title {
             @include gradient--title ();
             @include padding (($size - 90px), 0, 0, 0);
+            @include font-size(38px, 700, 46px);
+
+            @include mobile {
+                @include font-size(30px, 700, 37px);
+            }
         }
     }
 
     .service__content {
+
+        @include mobile {
+            @include flex(column, flex-start, flex-start);
+            @include padding (30px, 30px, 30px, 30px);
+        }
+
         @include flex(row, flex-start, flex-start);
         @include padding (($size - 40px), ($size + 60px), ($size - 40px), ($size + 60px));
         flex-wrap: wrap;
 
         .service__item {
+
+            @include mobile {
+                width: 100%;
+                @include padding (0, 0, 30px, 0);
+            }
+
             @include flex(column, flex-start, flex-start);
             width: 32%;
             @include padding (0, ($size - 40px), ($size - 13px), 0);
 
             .service__img {
+
                 @include padding (0, 0, ($size - 70px), 0);
             }
 
@@ -288,6 +402,11 @@ ul, ol {
 .section {
 
     .slideshow__container {
+
+        @include mobile {
+            @include padding (30px, 30px, 30px, 30px);
+        }
+
         @include padding (($size - 40px), ($size + 60px), ($size - 40px), ($size + 60px));
     }
     
@@ -299,6 +418,10 @@ ul, ol {
         overflow: hidden;
         position: relative;
 
+        @include mobile {
+            height: 750px;
+        }
+
         .slider__item {
             overflow-x: scroll;
             position: relative;
@@ -306,6 +429,11 @@ ul, ol {
             scroll-snap-type: x mandatory;
 
             .slide {
+
+                @include mobile {
+                    @include flex (column, flex-start, flex-start);
+                }
+
                 @include flex(row, flex-start, flex-start);
                 width: $width;
                 transform-origin: center center;
@@ -316,10 +444,12 @@ ul, ol {
             }
 
             .slider__img {
+                
                 border-radius: 12px 0px 0px 12px;
             }
 
             .slideshow__content {
+
                 @include flex(column, flex-start, flex-start);
                 @include padding (($size - 70px), ($size - 70px), ($size - 70px), ($size - 70px));
 
@@ -334,6 +464,11 @@ ul, ol {
             }
 
             .slideshow__subtitle {
+
+                @include mobile {
+                    @include font-size(30px, 700, 37px);
+                }
+
                 @include gradient--title();
                 @include padding (0, 0, ($size - 70px), 0);
             }
@@ -384,13 +519,15 @@ ul, ol {
         }
 
         .sponsor__content {
+
+            @include mobile {
+                @include flex(column, center, center);
+                width: 100%;
+            }
+
             @include flex(row, center, center);
             flex-wrap: wrap;
             @include padding (0, 0, ($size - 40px),0);
-
-            .sponsor__img, .sponsor__img--special, .sponsor__img--modified, .sponsor__img--secondary, .sponsor__img--edited {
-                width: $width - 77%;
-            }
 
             .sponsor__img--special {
                 border-radius: 10px 0 0 0;
@@ -407,10 +544,25 @@ ul, ol {
             .sponsor__img--edited {
                 border-radius: 0 0 10px 0;
             }
+
+            .sponsor__img, .sponsor__img--special, .sponsor__img--modified, .sponsor__img--secondary, .sponsor__img--edited {
+                
+                width: $width - 77%;
+
+                @include mobile {
+                    width: 100%;
+                    border-radius: 0;
+                }
+            }
         }
     }
 
     .products {
+
+        @include mobile {
+            @include padding (30px, 30px, 30px, 30px);
+        }
+
         @include padding (($size - 40px), ($size + 60), ($size - 70px), ($size + 60));
         background: $color--background;
 
@@ -431,15 +583,32 @@ ul, ol {
                 .product__subtitle {
                     @include gradient--title ();
                     @include padding (0, 0, ($size - 70px), 0);
+
+                    @include mobile {
+                        @include font-size(30px, 700, 37px);
+                        width: 80%;
+                    }
+            
                 }
             }
 
             .product__info {
 
+                @include mobile {
+                    @include flex(column, flex-start, flex-start);
+                }
+
                 @include flex(row, flex-start, flex-start);
                 column-gap: 30px;
 
                 .product__content {
+
+                    @include mobile {
+                        width: 100%;
+                        height: 440px;
+                        margin-bottom: 30px;
+                    }
+
                     @include flex(column, flex-start, flex-start);
                     background: white;
                     width: $width - 60%;
@@ -487,18 +656,35 @@ ul, ol {
     background: $color--background;
     @include padding (($size - 70px), ($size + 60px), ($size - 70px), ($size + 60px));
 
+    @include mobile {
+        @include padding (30px, 30px, 30px, 30px);
+    }
+
     .footer__wrapper {
         border-top: 2px solid $color--separator;
 
         .footer__items {
+
             @include flex (row, space-between, flex-start);
             @include padding (($size - 70px), 0, 0, 0);
 
+            @include mobile {
+                @include flex (column, center, center);
+            }
+
             .footer__nav {
-                @include flex (row, flex-start, center  );
+                @include flex (row, flex-start, center);
+
+                @include mobile {
+                    @include flex (column, center, center);
+                }
 
                 .footer__subcontent {
                     @include padding (0, ($size - 90px), 0, 0);
+
+                    @include mobile {
+                        padding-bottom: 10px;
+                    }
 
                     .footer__link {
                         @include font-size(16px, 400, 20px);
@@ -516,6 +702,13 @@ ul, ol {
                         }
                     }
 
+                    .footer__separator {
+
+                        @include mobile {
+                            display: none;
+                        }
+                    }
+
                 }
             }
         }
@@ -529,9 +722,20 @@ ul, ol {
             @include padding (($size - 80px), 0, 0, 0);
 
             .footer__nav {
+                
                 @include flex (row, flex-start, center);
 
-                .footer__details{
+                @include mobile {
+                    @include flex (column, center, center);
+                }
+
+                .footer__details {
+
+                    @include mobile {
+                        
+                        padding-bottom: 10px;
+                    }
+
                     @include padding (0, ($size - 90px), 0, 0);
 
                     .footer__info, .footer__info--special {
@@ -544,6 +748,13 @@ ul, ol {
 
                     .footer__info--special {
                         color: $font-color--accent;
+                    }
+
+                    .footer__separator {
+
+                        @include mobile {
+                            display: none;
+                        }
                     }
                 }
             }
