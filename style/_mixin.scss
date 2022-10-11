@@ -22,12 +22,6 @@
     border-radius: $bradius;
   }
 
-  @mixin margin($top, $right, $bottom, $left) {
-    margin-top: $top;
-    margin-right: $right;
-    margin-bottom: $bottom;
-    margin-left: $left;
-  }
 
   @function calculateRem($size) {
     $remSize: $size / 16px;
