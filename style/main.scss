@@ -58,7 +58,8 @@ ul, ol {
 
         @include tabletSD {
             @include padding (50px, 60px, 0 , 60px);
-            @include flex (column, column-reverse, flex-start);
+            @include flex (row, flex-start, flex-start);
+            flex-wrap: wrap;
         }
 
         @include tabletMED {
@@ -115,7 +116,6 @@ ul, ol {
                 @include flex (row, flex-start, flex-start);
                 z-index: 100;
             }
-    
         }
 
         .header__wrap {
@@ -123,13 +123,17 @@ ul, ol {
             @include mobile {
                 @include flex (row, center, center);
             }
+
+            @include tabletSD {
+                width: 100%;
+                @include flex (column, flex-start, flex-start);
+            }
     
             @include flex(column, flex-start, center); /*including flex*/
 
             .header__info {
 
                 @include mobile {
-                    outline: 2px solid orange;
                     @include padding (10px, 0, 10px, 0);
                 }
 
@@ -198,21 +202,19 @@ ul, ol {
                         bottom: 0;
                         left: 0;
                         right: 0;
-                        height: 351px;
+                        height: 380px;
                         z-index: 1000;
-                        @include margin (0, 8px, 0, 8px);
                         border-radius: 12px 12px 0px 0px;
+                        padding-top: 70px;
+                        @include margin (0, 8px, 0, 8px);
                     }
-                }
-
-                @include tabletSD {
-                    display: none;
                 }
 
                 @include mobile {
                     
                     .toggle {
                         display: inline-block;
+                        @include margin (-20px, 0, 0, 50px);
                         @include setDimensions (35px, 35px, 0);
                         background-image: url(../imgs/Hamburger.svg);
                         text-decoration: none;
@@ -225,6 +227,27 @@ ul, ol {
                     }
                 }
 
+                #close {
+
+                    @include mobile {
+                        display: block;
+                        @include setDimensions (35px, 35px, 0);
+                        background-image: url(../imgs/close.svg);
+                        background-color: white;
+                        cursor: pointer;
+                        position: absolute;
+                        bottom: 0; 
+                        top: 20px;
+                        right: 20px;
+                    }                    
+                }
+
+                @include tabletSD {
+                    .toggle {
+                        display: none;
+                    }
+                }
+
                 .subheader__nav {
                     @include flex(row, flex-start, center); /*including flex*/
                     z-index: $z;
@@ -233,25 +256,31 @@ ul, ol {
                         display: none;
                     }
 
-                    @include tabletSD {
+                    @include tabletHD {
                         display: block;
+                        @include flex (row, flex-start, flex-start);
+                        flex-wrap: wrap;
+                        width: 100%;
                     }
 
-                    @include tabletMED {
-                        display: none;
+                    @include tabletSD {
+                        display: inline-block;
+                        @include flex (row, flex-start, flex-start);
+                        flex-wrap: wrap;
+                        width: 100%;
                     }
 
                     .subheader__item {
-
-                        @include tabletSD {
-                            @include padding (0, ($size - 85px), ($size - 97px), 0);
-                        }
                         
                         @include padding (0, ($size - 85px), ($size - 97px), 0);
 
                         @include mobile {
                             z-index: 100000;
-                            @include padding (30px, 10px, 0, 10px);
+                            @include padding (15px, 10px, 0, 10px);
+                        }
+
+                        @include tabletSD {
+                            padding-top: 0;
                         }
 
                         .subheader__link {
@@ -261,9 +290,21 @@ ul, ol {
                                 @include font-size(24px, 700, 29px);
                                 background: #F5F5FA;
                                 border-radius: 12px; 
-                                @include padding (7px, 70px, 7px, 70px);
-                                margin-right: 20px;
-                                margin-left: 20px;
+                                @include padding (7px, 0, 7px, 0);
+                                @include flex (column, center,center);
+                            }
+                            
+                            @include tabletSD {
+                                background: none;
+                                margin: 0;
+                                padding: 0;
+                                color: $font-color--main;
+                                @include font-size(16px, 700, auto);
+                                &:hover {
+                                    color: $font-color--hover;
+                                    border-bottom: 2px solid #F0145A;
+                                    border-radius: 0;
+                                }
                             }
 
                             @include font-size(16px, 700, auto);
@@ -290,9 +331,7 @@ ul, ol {
                 top: 0;
 
                 @include mobile {
-                    overflow: hidden;
-                    overflow: -moz-hidden-unscrollable;
-                    overscroll-behavior-x: contain;
+                    overflow-x: hidden;
                 }
             }
 
@@ -556,6 +595,10 @@ ul, ol {
                 @include padding (0, ($size - 40px), 60px, 0);
             }
 
+            @include tabletHD {
+                column-gap: 20px;
+            }
+
             @include flex(column, flex-start, flex-start);
             width: 32%;
             @include padding (0, ($size - 40px), ($size - 13px), 0);
@@ -611,8 +654,9 @@ ul, ol {
 
         width: $width;
         border-radius: 20px;
-        overflow: hidden;
         position: relative;
+        @include flex (column, center, center);
+        margin-bottom: 50px;
 
         @include mobile {
             height: 978px;
@@ -636,7 +680,6 @@ ul, ol {
 
         .slider__item {
             overflow-x: scroll;
-            position: relative;
             scroll-behavior: smooth;
             scroll-snap-type: x mandatory;
 
@@ -659,6 +702,16 @@ ul, ol {
 
             }
 
+            .slider .slide .current {
+                opacity: 1;
+            }
+
+            .slider .slide {
+                position: absolute;
+                opacity: 0;
+                transition: all 5s;
+            }
+
             .slider__img {
                 
                 border-radius: 12px 0px 0px 12px;
@@ -668,6 +721,10 @@ ul, ol {
                     height: 500px;
                     object-fit: cover;
 
+                }
+
+                @include tabletMED {
+                    width: 825px;
                 }
 
                 @include tabletHD {
@@ -898,16 +955,18 @@ ul, ol {
                     }
 
                     @include tabletHD {
-                        width: 31%;
+                        width: 30%;
                         height: 500px;
                     }
 
                     @include desktop {
-                        height: 450px;
+                        height: 500px;
+                        width: 40%;
                     }
 
                     @include desktopHD {
-                        height: 480px;
+                        width: 40%;
+                        height: 500px;
                     }
 
                     @include flex(column, flex-start, flex-start);
@@ -953,6 +1012,17 @@ ul, ol {
                     @include tabletSD {
                         width: 47%;
                     }
+
+                    @include tabletMED {
+                        width: 47%; 
+                        height: 450px;
+                        margin-bottom: 30px;
+                    }
+
+                    @include tabletHD {
+                        width: 30%;
+                        height: 500px;
+                    }
                 }
                 
                 .product__content--special {
@@ -960,6 +1030,16 @@ ul, ol {
                     @include tabletSD {
                         width: 100%;
                         height: 530px;
+                    }
+
+                    @include tabletMED {
+                        width: 98%; 
+                        height: 560px;
+                    }
+
+                    @include tabletHD {
+                        width: 30%;
+                        height: 500px;
                     }
                 }
             }

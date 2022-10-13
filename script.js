@@ -9,5 +9,5 @@ console.log(subheader__nav);
 console.log(close);
 
 close.addEventListener('click', function () {
-    menubar.style.display = 'none';
+    subheader__nav.style.display = 'none';
 });
