@@ -84,13 +84,40 @@ ul, ol {
 
         .header__logo {
 
+            @include flex (row, flex-start, flex-start);
+
             .logo__text {
 
-                @include padding (10px, 0, 0, 10px);
+                @include padding (20px, 0, 0, 10px);
                 @include font-size(20px, 400, auto);
                 color: $font-color--main;
 
                 
+                @include desktop {
+                    display: none;
+                }
+
+                @include desktopHD {
+                    display: none;
+                }
+
+                @include tabletHD {
+                    display: none;
+                }
+
+                @include tabletMED {
+                    display: none;
+                }
+
+                @include tabletSD {
+                    display: none;
+                }
+            }
+
+            .separator__img {
+                height: 60px;
+                padding-left: 4px;
+
                 @include desktop {
                     display: none;
                 }
@@ -239,7 +266,11 @@ ul, ol {
                         bottom: 0; 
                         top: 20px;
                         right: 20px;
-                    }                    
+                    }
+                    
+                    @include tabletSD {
+                        display: none;
+                    }
                 }
 
                 @include tabletSD {
@@ -654,9 +685,8 @@ ul, ol {
 
         width: $width;
         border-radius: 20px;
+        overflow-y: hidden;
         position: relative;
-        @include flex (column, center, center);
-        margin-bottom: 50px;
 
         @include mobile {
             height: 978px;
@@ -680,6 +710,7 @@ ul, ol {
 
         .slider__item {
             overflow-x: scroll;
+            position: relative;
             scroll-behavior: smooth;
             scroll-snap-type: x mandatory;
 
@@ -700,16 +731,6 @@ ul, ol {
                 scroll-snap-align: center;
                 background: $color--background;
 
-            }
-
-            .slider .slide .current {
-                opacity: 1;
-            }
-
-            .slider .slide {
-                position: absolute;
-                opacity: 0;
-                transition: all 5s;
             }
 
             .slider__img {
@@ -796,14 +817,15 @@ ul, ol {
         .dot {
             width: 8px;
             height: 8px;
-            background: gray;
+            background: #24A3FF;
+            opacity: 0.2;
             border-radius: 50%;
             margin: 0 3px;
             cursor: pointer;
         }
 
         .active-dot {
-            background: #3f3f3f;
+            background: #24A3FF;
             cursor: default;
         }
     }
@@ -1193,3 +1215,49 @@ ul, ol {
     }
 }
 
+#services {
+
+    .container {
+
+        .header {
+
+            .separator__img {
+                display: block;
+            }
+    
+            .logo__text {
+                display: block;
+            }
+    
+        }
+
+        .banner {
+
+            .service__title {
+
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .section {
+
+        .sponsors__title {
+
+            padding-top: 60px;
+        }
+
+        .sponsor__content {
+
+            padding-bottom: 0;
+
+            @include desktopHD { 
+                padding-bottom: 60px;
+            }
+        }
+    }
+
+    .footer__wrapper {
+        border: none;
+    }
+}
